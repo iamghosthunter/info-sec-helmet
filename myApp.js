@@ -1,7 +1,14 @@
 const express = require('express');
+const helmet = require('helmet');
 const app = express();
 
+const PORT = process.env.port || 3030;
 
+app.listen(PORT, () => {
+  console.log('useful programmer info security started on port App  ${PORT');
+});
+
+app.use(helmet.hidePoweredby());
 
 
 
