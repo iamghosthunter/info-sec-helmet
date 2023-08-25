@@ -8,7 +8,8 @@ app.listen(PORT, () => {
   console.log('useful programmer info security started on port App  ${PORT');
 });
 
-app.disable('x-powered-by');
+const hidePoweredBy = require('hide-powered-by')
+app.use(hidePoweredBy())
 
 
 
