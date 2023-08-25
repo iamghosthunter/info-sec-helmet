@@ -8,7 +8,7 @@ app.listen(PORT, () => {
   console.log('useful programmer info security started on port App  ${PORT');
 });
 
-app.use(helmet.hidePoweredby());
+app.disable('x-powered-by');
 
 
 
