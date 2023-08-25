@@ -10,6 +10,8 @@ app.listen(PORT, () => {
 
 const hidePoweredBy = require('hide-powered-by')
 app.use(hidePoweredBy())
+app.use(helmet.frameguard({action: 'deny'}));
+
 
 
 
