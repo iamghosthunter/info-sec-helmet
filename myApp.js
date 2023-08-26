@@ -5,12 +5,13 @@ const app = express();
 const PORT = process.env.port || 3030;
 
 app.listen(PORT, () => {
-  console.log('useful programmer info security started on port App  ${PORT');
+  console.log('Ghost Hunter info security started on port App  ${PORT');
 });
 
 const hidePoweredBy = require('hide-powered-by')
 app.use(hidePoweredBy())
 app.use(helmet.frameguard({action: 'deny'}));
+app.use(helmet.xssFilter({}));
 
 
 
